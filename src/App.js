@@ -29,6 +29,13 @@ const CurrentTasks = () => (
   <Template title="Current Tasks" status="Current"/>
 );
 
+const Landing = () =>  {
+  console.log("-----test----",window.location.href);
+  return (
+    <Template title="Current Tasks" status="Current"/>
+  )
+}
+
 const CompletedTasks = () => (
   <Template title="Completed Tasks" status="Completed"/>
 );
@@ -38,7 +45,7 @@ class App extends Component {
     return (
       <BrowserRouter>
         <div>
-          <Route exact path="/" component={CurrentTasks}/>
+          <Route exact path="/token/:tokenId" component={Landing}/>          
           <Route path="/completed" component={CompletedTasks}/>
         </div>
       </BrowserRouter>
